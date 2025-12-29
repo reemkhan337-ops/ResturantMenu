@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>La Bella Ristorante</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">🍴</div>
+  <nav>
+    <a href="#menu">Menu</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="cart-btn" onclick="toggleCart()">🛒 <span id="count">0</span></div>
+</header>
+
+<section class="hero">
+  <h1>La Bella Ristorante</h1>
+  <p>Authentic Italian cuisine crafted with passion</p>
+  <div class="hero-btns">
+    <button onclick="scrollToMenu()">View Menu</button>
+   <button class="outline" onclick="scrollToContact()">Reserve Table</button>
+  </div>
+</section>
+
+<section id="menu">
+  <h2>Our <span>Menu</span></h2>
+  <div class="filters">
+    <button onclick="loadMenu('All')">All</button>
+    <button onclick="loadMenu('Pizzas')">Pizzas</button>
+    <button onclick="loadMenu('Main Courses')">Main Courses</button>
+    <button onclick="loadMenu('Desserts')">Desserts</button>
+    <button onclick="loadMenu('Beverages')">Beverages</button>
+  </div>
+  <div class="menu-grid"></div>
+</section>
+<section id="about" class="info">
+  <h2>About La Bella</h2>
+  <p>
+    La Bella Ristorante brings authentic Italian flavors crafted with tradition,
+    passion, and the finest ingredients since 1985.
+  </p>
+</section>
+
+<section id="contact" class="info">
+  <h2>Contact Us</h2>
+  <p>📍 123 Restaurant Ave, New York, NY</p>
+  <p>📞 +1 234 567 890</p>
+  <p>📧 info@labella.com</p>
+</section>
+
+
+<div class="cart" id="cart">
+  <h3>Your Cart</h3>
+  <div id="cartItems"></div>
+  <p>Total: $<span id="total">0</span></p>
+  <button onclick="checkout()">Checkout</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
